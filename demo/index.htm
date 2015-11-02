@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Pagination Demo</title>
+		<link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../pagination.css" />
+        <!-- <link rel="stylesheet" href="demo.css" /> -->
+        <script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="../jquery.pagination.js"></script>
+        
+        <script type="text/javascript">
+        
+           
+            function pageselectCallback(page_index, jq){
+                var new_content = jQuery('#hiddenresult div.result:eq('+page_index+')').clone();
+                $('#Searchresult').empty().append(new_content);
+                return false;
+            }
+           
+            /** 
+             * Initialisation function for pagination
+             */
+            function initPagination() {
+                // count entries inside the hidden content
+                var num_entries = jQuery('#hiddenresult div.result').length;
+                // Create content inside pagination element
+                $("#Pagination").pagination(num_entries, {
+                    callback: pageselectCallback,
+                    items_per_page:1 // Show only one item per page
+                });
+             }
+            
+            // When document is ready, initialize pagination
+            $(document).ready(function(){      
+                initPagination();
+            });
+            
+            
+            
+        </script>
+    </head>
+    <body>
+        <h1>job News</h1>
+    
+        <br style="clear:both;" />
+        <div id="Searchresult">
+            This content will be replaced when pagination inits.
+        </div>
+        
+        <!-- Container element for all the Elements that are to be paginated -->
+        <div id="hiddenresult" style="display:none;">
+           
+            <div class="result">
+
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name 333333</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name 333333</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name 333333</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+             </div>
+			 
+			 
+			 <div class="result">
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name DDDDDDDDD</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name EEEEEEEE</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name FFFFFFFFF</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+             </div>
+			 
+			 <div class="result">
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name GGGGGGGG</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name HHHHHHHH</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name IIIIIIIIII</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+             </div>
+			 
+			 <div class="result">
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name JJJJJJJJ</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name KKKKKKKKKK</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name LLLLLLLLLLLL</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+             </div>
+
+			 <div class="result">
+					 <a href="job-news-details.php" target="_blank">
+					 <div class="job-box">
+						<h6>Company Name CCCCCCCC</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name VVVVVVV</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name 333333</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+             </div>
+			 
+			 <div class="result">
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name AAAAA</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+					
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name BBBBBBBB</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name 333333</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+             </div>
+			 
+			 
+			 
+			 <div class="result">
+					<a href="job-news-details.php" target="_blank">
+					<div class="job-box">
+						<h6>Company Name 333333</h6>
+						<h4>Job Title</h4>
+						<div class="job-requer">
+							<p>
+								Education:<br>
+								B.Sc in Computer Science and Engineering or Electrical Engineering from any reputed university 
+							</p>
+							<p>
+								Experience: At least 3 year(s)
+							</p>
+						</div>
+						<div style="float:right;">
+							Deadline: 24 oct, 2015
+						</div>
+					</div>
+					</a>
+             </div>
+        </div>
+		    <div id="Pagination"></div>
+    </body>
+</html>
